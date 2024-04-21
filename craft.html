@@ -3,7 +3,7 @@
 
 <head>
     <title>CRAFT & SIP</title>
-    <link rel="icon" href="images/logo.png">
+    <link rel="icon" href="logo.png">
     <link rel="stylesheet" href="craft.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +11,7 @@
 
 <body>
     <header id="home">
-        <img src="images/logo.png" alt="CRAFT & SIP LOGO" href="#home">
+        <img src="logo.png" alt="CRAFT & SIP LOGO" href="#home">
         <div>
             <h1>CRAFT & SIP</h1>
             <p>Crafting joy in every sip</p>
@@ -51,7 +51,7 @@
     <div class="slideshow">
         <div class="mySlides fade">
             <div class="numbertext">1 / 2</div>
-            <img src="images/best.png">
+            <img src="best.png">
             <button class="reveal-button" onclick="revealLink()">Reveal Link</button>
             <div class="external-link" style="display: none;">
                 <a href="https://example.com">External Link</a>
@@ -59,7 +59,7 @@
         </div>
         <div class="mySlides fade">
             <div class="numbertext">2 / 2</div>
-            <img src="images/craft.png">
+            <img src="craft.png">
             <button class="reveal-button" onclick="revealLink()">Reveal Link</button>
             <div class="external-link" style="display: none;">
                 <a href="https://example.com">External Link</a>
@@ -69,40 +69,41 @@
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
-
-    <div class="menu">
+<Section id = "Menu">
+    <div class="Menu">
         <h2 class="menu-title">Our Menu</h2>
         <div class="menu-items">
             <div class="menu-item">
-                <img src="images/logo.png" alt="Item 1">
+                <img src="logo.png" alt="Item 1">
                 <h3>Caramel Macchiato</h3>
                 <p></p>
                 <p>Price: PHP 100.00</p>
-                <button onclick="addToCart('Item 1', 100, 'images/craft.png')">Add to Cart</button>
+                <button onclick="addToCart('Item 1', 100, 'craft.png')">Add to Cart</button>
             </div>
             <div class="menu-item">
-                <img src="images/logo.png" alt="Item 2">
+                <img src="logo.png" alt="Item 2">
                 <h3>Salted Caramel</h3>
                 <p></p>
                 <p>Price: PHP 150.00</p>
-                <button onclick="addToCart('Item 2', 150, 'images/logo.png')">Add to Cart</button>
+                <button onclick="addToCart('Item 2', 150, 'logo.png')">Add to Cart</button>
             </div>
             <div class="menu-item">
-                <img src="images/logo.png" alt="Item 3">
+                <img src="logo.png" alt="Item 3">
                 <h3>Coffee</h3>
                 <p></p>
                 <p>Price: PHP 200.00</p>
                 <button onclick="addToCart('Item 3', 200, 'images/craft.png')">Add to Cart</button>
             </div>
             <div class="menu-item">
-                <img src="images/logo.png" alt="Item 4">
+                <img src="logo.png" alt="Item 4">
                 <h3>White Chocolate</h3>
                 <p></p>
                 <p>Price: PHP 250.00</p>
-                <button onclick="addToCart('Item 4', 250, 'images/logo.png')">Add to Cart</button>
+                <button onclick="addToCart('Item 4', 250, 'logo.png')">Add to Cart</button>
             </div>
         </div>
     </div>
+</Section>
 
     <section id="Promos">
         <h2>Promotions</h2>
@@ -113,14 +114,14 @@
                 <h3>Salted Caramel</h3>
                 <p></p>
                 <p>Price: <span class="original-price">PHP 100.00</span> PHP 80.00</p>
-                <button onclick="addToCart('Discounted Item', 80, 'images/]logo.png')">Add to Cart</button>
+                <button onclick="addToCart('Discounted Item', 80, 'logo.png')">Add to Cart</button>
             </div>
             <div class="menu-item">
                 <img src="images/logo.png" alt="Discounted Item">
                 <h3>White Chocolate</h3>
                 <p>Description of Discounted Item</p>
                 <p>Price: <span class="original-price">PHP 100.00</span> PHP 80.00</p>
-                <button onclick="addToCart('Discounted Item', 80, 'images/]logo.png')">Add to Cart</button>
+                <button onclick="addToCart('Discounted Item', 80, 'logo.png')">Add to Cart</button>
             </div>
         </div>
    
