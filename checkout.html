@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Checkout</title>
+	<link rel="icon" href="images/logo.png">
+    <!-- Link to external css file -->
+    <link rel="stylesheet" href="craft.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <h1>Checkout</h1>
+    <div id="order-summary">
+        <!-- Display order summary here -->
+    </div>
+
+    <h2>Payment Information</h2>
+    <form id="payment-form">
+        <label for="payment-method">Select Payment Method:</label>
+        <select id="payment-method" name="payment-method">
+            <option value="credit-card">Credit Card</option>
+            <option value="paypal">PayPal</option>
+            <!-- Add more payment options here if needed -->
+        </select>
+
+        <div id="total">
+            <!-- Display total price -->
+        </div>
+
+        <button type="submit">Proceed to Pay</button>
+    </form>
+
+    <script>
+        // Function to display order summary
+        function displayOrderSummary() {
+            // Fetch order summary data from localStorage or any other source
+            let orderSummary = ''; // Replace with actual order summary HTML
+            document.getElementById('order-summary').innerHTML = orderSummary;
+        }
+
+        displayOrderSummary();
+
+        // Function to calculate total price
+        function calculateTotalPrice() {
+            let cartItems = localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')) : [];
+            let total = 0;
+
+            cartItems.forEach(item => {
+                total += item.price * item.quantity;
+            });
+
+            return total;
+        }
+
+        // Function to display total price
+        function displayTotalPrice() {
+            document.getElementById('total').innerHTML = 'Total: ₱' + calculateTotalPrice().toFixed(2);
+        }
+
+        displayTotalPrice();
+
+        // Function to handle form submission
+        document.getElementById('payment-form').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Get selected payment method
+            let paymentMethod = document.getElementById('payment-method').value;
+
+            // Perform mock payment processing based on the selected payment method
+            mockPaymentProcess(paymentMethod);
+        });
+
+        // Function to simulate payment processing
+        function mockPaymentProcess(paymentMethod) {
+            // Clear cart items and quantities
+            localStorage.removeItem('cartItems');
+            alert('Payment successful! Thank you for your purchase.');
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: ;
+    }
+    header{
+        height: 210px;
+        text-align: center;
+        font-family: serif;
+    }
+    .container {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 15px;
+        background-color: #E9EDC9;
+        height: auto;
+        font-family: sans-serif;
+    }
+    input[type="text"],
+    input[type="password"],
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        box-sizing: border-box;
+    }
+    label[for="username"],
+    label[for="password"],
+    label[type="submit"] {
+
+        color: black;
+        font-family: monospace;
+    }
+</style>
+</head>
+<body>
+    <header>
+        <img src="images/logo.png">
+        <h1></h1>
+        <h4>Craft & Sip</h4>
+    </header>
+<div class="container">
+    <center><h2>Login</h2></center>
+    <form action="craft.html" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <input type="submit" value="Login">
+    </form>
+</div>
+</body>
+</html>
