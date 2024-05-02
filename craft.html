@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CRAFT & SIP</title>
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="craft.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <header id="home">
+        <img src="images/logo.png" alt="CRAFT & SIP LOGO" href="#home">
+        <div>
+            <h1>CRAFT & SIP</h1>
+            <p>Crafting joy in every sip</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#Promos">Promos</a></li>
+            <li><a href="#Menu">Menu</a></li>
+            <li><a href="#Contact">Contact</a></li>
+            <li><a href="#About">About</a></li>
+        </ul>
+    </nav>
+
+    <div class="shopping-cart" id="shopping-cart" onclick="openCartPage()">
+        &#128722; <span id="cart-count"></span>
+    </div>
+
+    <div class="hamburger-menu" onclick="toggleSidebar()">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="login.html" onclick="toggleSidebar()">Log in</a></li>
+            <li><a href="#home" onclick="toggleSidebar()">Home</a></li>
+            <li><a href="#Promos" onclick="toggleSidebar()">Promos</a></li>
+            <li><a href="#Menu" onclick="toggleSidebar()">Menu</a></li>
+            <li><a href="#Contact" onclick="toggleSidebar()">Contact</a></li>
+            <li><a href="#About" onclick="toggleSidebar()">About</a></li>
+        </ul>
+    </div>
+
+    <div class="slideshow">
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 2</div>
+            <img src="images/best.png">
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 2</div>
+            <img src="images/craft.png">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <section id="Menu">
+        <br>
+        <br>
+    <div class="menu">
+        <h2 class="menu-title">Our Menu</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <img src="images/logo.png" alt="Caramel Macchiato">
+                <h3>Caramel Macchiato</h3>
+                <p></p>
+                <p>Price: PHP 100.00</p>
+                <button onclick="addToCart('Caramel Macchiato', 100, 'images/craft.png')">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="images/logo.png" alt="Salted Caramel">
+                <h3>Salted Caramel</h3>
+                <p></p>
+                <p>Price: PHP 150.00</p>
+                <button onclick="addToCart('Salted Caramel', 150, 'images/logo.png')">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="images/logo.png" alt="Iced Americano">
+                <h3>Iced Americano</h3>
+                <p></p>
+                <p>Price: PHP 130.00</p>
+                <button onclick="addToCart('Iced Americano', 130, 'images/craft.png')">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="images/logo.png" alt="White Chocolate">
+                <h3>White Chocolate</h3>
+                <p></p>
+                <p>Price: PHP 100.00</p>
+                <button onclick="addToCart('White Chocolate', 100, 'images/logo.png')">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+        </section>
+
+    <section id="Promos">
+        <br>
+        <br>
+        <h2>Promotions</h2>
+        <p>Check out our latest promotions and special offers!</p>
+        <div class="promos-content">
+            <div class="menu-item">
+                <img src="images/logo.png" alt="Salted Caramel">
+                <h3>Salted Caramel</h3>
+                <p></p>
+                <p>Price: <span class="original-price">PHP 100.00</span> PHP 80.00</p>
+                <button onclick="addToCart('Salted Caramel', 80, 'images/]logo.png')">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="images/logo.png" alt="White Chocolate">
+                <h3>White Chocolate</h3>
+                <p>Price: <span class="original-price">PHP 150.00</span> PHP 130.00</p>
+                <button onclick="addToCart('White Chocolate', 80, 'images/]logo.png')">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="images/logo.png" alt="Caramel Machiatto">
+                <h3>Caramel Machiatto</h3>
+                <p></p>
+                <p>Price: <span class="original-price">PHP 100.00</span> PHP 80.00</p>
+                <button onclick="addToCart('Caramel Machiatto', 80, 'images/]logo.png')">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="images/logo.png" alt="Iced Americano">
+                <h3>Iced Americano</h3>
+                <p></p>
+                <p>Price: <span class="original-price">PHP 100.00</span> PHP 80.00</p>
+                <button onclick="addToCart('Iced Americano', 80, 'images/]logo.png')">Add to Cart</button>
+            </div>
+        </div>
+   
+</section>
+
+<section id="Contact">
+    <div class="contact-content">
+        <h2>Contact Us</h2>
+        <p>Have a question or feedback? Feel free to reach out to us.</p>
+        <p>Email: info@craftandsip.com</p>
+        <p>Phone: +63 (23) 456-7890</p>
+        <p>Address: San Roque II, San Jose, Occidental Mindoro, Philippines</p>
+    </div>
+</section>
+
+<section id="About">
+    <div class="about-content">
+        <h2>About Us</h2>
+        <p>Welcome to Craft & Sip, where we craft joy in every sip! We are passionate about creating unique and delicious beverages that delight our customers.</p>
+        <p>Our journey began with a simple idea: to combine the art of crafting with the pleasure of sipping. From handcrafted coffees to artisanal teas, we offer a wide range of beverages to suit every taste and preference.</p>
+        <p>At Craft & Sip, we believe in using only the finest ingredients sourced from local farmers and producers. Our commitment to quality ensures that every sip is an experience to remember.</p>
+        <p>Whether you're looking for your morning pick-me-up or a relaxing afternoon treat, we've got you covered. Join us on a journey of flavor and discovery at Craft & Sip!</p>
+    </div>
+</section>
+
+<script>
+
+        function toggleSidebar() {
+        var sidebar = document.getElementById("sidebar");
+        sidebar.classList.toggle("active");
+    }
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        if (!n) { n = slideIndex; }
+        if (n > slides.length) { slideIndex = 1; }
+        if (n < 1) { slideIndex = slides.length; }
+        for (i = 0; i < slides.length; i++) { slides[i].style.display = "none"; }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(() => { showSlides(slideIndex += 1); }, 8000);
+    }
+
+    function revealLink() {
+        let buttons = document.getElementsByClassName("reveal-button");
+        let links = document.getElementsByClassName("external-link");
+        for (let i = 0; i < buttons.length; i++) {
+            buttons[i].style.display = "none";
+            links[i].style.display = "block";
+        }
+    }
+
+    function openCartPage() {
+        window.location.href = "shopping-cart.html";
+    }
+
+    function addToCart(itemName, price, imageSrc) {
+        let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        let itemExists = false;
+        cartItems.forEach(item => {
+            if (item.name === itemName) {
+                item.quantity++;
+                itemExists = true;
+            }
+        });
+        if (!itemExists) {
+            cartItems.push({ name: itemName, price: price, quantity: 1, image: imageSrc });
+        }
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        updateCartCount();
+    }
+
+    function updateCartCount() {
+        let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        let totalCount = 0;
+        cartItems.forEach(item => { totalCount += item.quantity; });
+        document.getElementById('cart-count').innerText = totalCount;
+    }
+</script>
+
+<footer>
+    <p>&copy; Programmed by: Phoebe Natad</p>
+</footer>
+
+</body>
+
+</html>

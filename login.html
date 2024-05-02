@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="craft.css">
+<title>Login</title>
+</head>
+<body>
+        <style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    title{
+        color:white;
+    }
+    header {
+    padding: 15px;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+}
+header img {
+    max-width: 100px;
+    margin-right: 10px;
+}
+
+    .container {
+        width:50%;
+        max-width: 400px;
+        margin: 100px auto;
+        padding: 30px;
+        border: 1px solid #ccc;
+        border-radius: 15px;
+        background-color: #7f6969;
+        height: auto;
+        font-family: sans-serif;
+        box-shadow: 10px 10px 5px ;
+    }
+    input {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        box-sizing: border-box;
+    }
+    label {
+        color: white;
+        font-family: monospace;
+    }
+    #btn{
+        color:#ffffff;
+        margin-top: 20px;
+        background-color:#F2E6DE ;
+        border-radius: 5px;
+    }
+    a{
+        color:#F2E6DE ;
+
+    }
+    </style>
+    <header>
+        <img src="images/logo.png">
+        <div>
+        <h1>Craft & Sip</h1>
+        <p>Crafting joy in every sip</p>
+    </div>
+    </header>
+<div class="container" id="login">
+    <center><h2>Login</h2></center>
+    <form id="loginForm"action="craft.html" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+        <br>
+        <input type="submit" value="submit">
+        <label id="reg">Don't have an account yet? <u><a href="">Sign Up</a></label> 
+    </form>
+</div>
+    <script>
+        function checkCredentials(username, password) {
+            return username === "phoebe" && password === "natadbsit2E";
+        }
+
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if (!checkCredentials(username, password)) {
+                alert("Incorrect username or password.");
+                return;
+            }
+
+            this.submit();
+        });
+    </script>
+</body>
+</html>
