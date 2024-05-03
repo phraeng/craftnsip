@@ -41,6 +41,7 @@ header h1, p, body, aside {
     overflow-x: hidden;
     padding-top: 60px;
     transition: 0.3s;
+	z-index: 1;
 }
 
 .sidebar.active {
